@@ -1,0 +1,55 @@
+{
+    "manifestVersion": 1,
+    "id": "UnicornSync",
+    "version": "0.7.0",
+    "name": "Unicorn Sync for Sitecore",
+    "publisher": "MartijnQuekel",
+    "description": "Sync Unicorn configurations with the remote Powershell script.",
+    "targets": [{
+        "id": "Microsoft.VisualStudio.Services"
+    }],
+    "demands": [
+        "api-version/3.0",
+        "contribution/ms.vss-dashboards-web.widget-catalog"
+    ],
+    "icons": {
+        "default": "images/logo_default.png"
+    },
+    "categories": [
+        "Build and release"
+    ],
+    "tags": [
+        "Sitecore",
+        "Unicorn",
+        "Azure",
+        "WebApp"
+    ],
+    "galleryFlags": [
+        "Public"
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "links": {},
+    "branding": {
+        "color": "rgb(34, 34, 34)",
+        "theme": "dark"
+    },
+    "files": [{
+            "path": "Tasks/Sync-Unicorn"
+        }
+    ],
+    "contributions": [{
+            "id": "UnicornSync",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/Sync-Unicorn"
+            }
+        }
+    ]
+}
